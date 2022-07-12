@@ -24,7 +24,6 @@ function App() {
 						element={
 							<PublicRoute>
 								<Login />
-								<Login />
 							</PublicRoute>
 						}
 					/>
