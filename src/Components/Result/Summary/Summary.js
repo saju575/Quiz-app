@@ -4,12 +4,12 @@ import usePicFetch from "../../../hooks/usePicFetch";
 import classes from "./Summary.module.css";
 export const Summary = ({ score, noq }) => {
 	const getKeyword = useMemo(() => {
-		if ((score / (noq * 3)) * 100 < 50) {
+		if ((score / (noq * 5)) * 100 < 50) {
 			return "failed";
-		} else if ((score / (noq * 3)) * 100 < 75) {
+		} else if ((score / (noq * 5)) * 100 < 75) {
 			return "good";
-		} else if ((score / (noq * 3)) * 100 < 100) {
-			return "very good ";
+		} else if ((score / (noq * 5)) * 100 < 100) {
+			return "very good";
 		} else {
 			return "excellent";
 		}

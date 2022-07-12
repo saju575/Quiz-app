@@ -13,7 +13,7 @@ export default function usePicFetch(url, method, headers) {
 					method: method || "GET",
 					headers: headers,
 				});
-				const data = response.json();
+				const data = await response.json();
 				setLoading(false);
 				setResult(data);
 			} catch (er) {
@@ -23,7 +23,7 @@ export default function usePicFetch(url, method, headers) {
 		}
 		requestFetch();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}, [url]);
 	return {
 		loading,
 		error,
